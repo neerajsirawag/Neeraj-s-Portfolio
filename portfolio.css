@@ -15,6 +15,11 @@
     scroll-behavior: smooth;
 }
 
+::selection{
+    background-color: crimson;
+    color: black;
+}
+
 :root{
     --color-primary: #111;
     --color-secondary: crimson;
@@ -34,6 +39,7 @@ body{
     background: var(--color-primary);
     line-height: 1.7;
     height: 111vh;
+    cursor: url('html_finalprojimages/custom-cursor.png'),auto;
     /* background: url(); */
 }
 
@@ -52,6 +58,18 @@ body{
     background: #ffffff;
 }
 
+.cursor{
+    width: 25px;
+    height : 25px;
+    border: 2px solid rgba(255, 255, 255, 0.797);
+    border-radius: 50%;
+    position: absolute;
+    filter: drop-shadow(1px 1px 5px white);
+    transition-duration: 200ms;
+    transition-timing-function: ease-out;
+    pointer-events: none;
+}
+
 
 img{
     display: block;
@@ -61,6 +79,7 @@ img{
 
 a,span,p{
     font-size: .9rem;
+    cursor: url('html_finalprojimages/custom-cursor.png'),auto;
 }
 h1{
     font-size: 2.7rem;
@@ -189,6 +208,7 @@ nav{
 .navlist li a:hover,
 .navlist a.active{
     color: var(--color-secondary);
+    filter: drop-shadow(2px 2px 15px crimson);
 }
 
 .menu-btn{
@@ -326,7 +346,7 @@ nav{
     font-weight: 700;
     font-size: .77rem;
     text-transform: uppercase;
-    cursor: pointer;
+    /* cursor: pointer; */
     box-shadow: var(--shadow);
     transition: var(--transition);
 }
@@ -713,7 +733,7 @@ nav{
     display: flex;
     gap: 1rem;
     margin-bottom: 1rem;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 .footer-container .post h6{
